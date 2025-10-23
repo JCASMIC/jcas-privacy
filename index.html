@@ -8,12 +8,32 @@
     body { font-family: -apple-system, Helvetica, Arial, sans-serif; margin: 40px; line-height: 1.6; max-width: 800px; }
     h1 { color: #0066cc; }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const lang = navigator.language || navigator.userLanguage;
+      const en = lang.startsWith("en");
+      document.getElementById("pt").style.display = en ? "none" : "block";
+      document.getElementById("en").style.display = en ? "block" : "none";
+    });
+  </script>
 </head>
 <body>
-  <h1>Política de Privacidade - CalculadoraJC</h1>
-  <p>A aplicação <strong>CalculadoraJC</strong> não recolhe, armazena nem partilha quaisquer dados pessoais dos utilizadores.</p>
-  <p>Não são utilizados serviços de terceiros, cookies ou mecanismos de rastreamento.</p>
-  <p>Desenvolvida por José Carlos em SwiftUI.</p>
-  <p>Contacto: <a href="mailto:info@jcas.pt">info@jcas.pt</a></p>
+  <!-- 🇵🇹 Versão Portuguesa -->
+  <div id="pt">
+    <h1>Política de Privacidade - CalculadoraJC</h1>
+    <p>A aplicação <strong>CalculadoraJC</strong> não recolhe, armazena nem partilha quaisquer dados pessoais dos utilizadores.</p>
+    <p>Não são utilizados serviços de terceiros, cookies ou mecanismos de rastreamento.</p>
+    <p>Desenvolvida por José Carlos em SwiftUI.</p>
+    <p>Contacto: <a href="mailto:info@jcas.pt">info@jcas.pt</a></p>
+  </div>
+
+  <!-- 🇬🇧 English Version -->
+  <div id="en" style="display:none">
+    <h1>Privacy Policy - CalculadoraJC</h1>
+    <p>The <strong>CalculadoraJC</strong> app does not collect, store, or share any personal data from users.</p>
+    <p>No third-party services, cookies, or tracking mechanisms are used.</p>
+    <p>Developed by José Carlos using SwiftUI.</p>
+    <p>Contact: <a href="mailto:info@jcas.pt">info@jcas.pt</a></p>
+  </div>
 </body>
 </html>
